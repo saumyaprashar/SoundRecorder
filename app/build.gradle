@@ -28,11 +28,7 @@ dependencies.classpath
 "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:
 ${project.properties.get('sonarqubeVersion', 3.0)}"
   }
-  
 }
-
-
-
 
 dependencies {
     compile 'com.android.support:appcompat-v7:21.0.+'
