@@ -1,12 +1,10 @@
 apply plugin: 'com.android.application'
 
-plugins {
-  id "org.sonarqube" version "2.7.1"
-}
 
 android {
     compileSdkVersion 21
     buildToolsVersion '25.0.0'
+    apply plugin: 'org.sonarqube'
 
     defaultConfig {
         applicationId "com.danielkim.soundrecorder"
@@ -24,7 +22,17 @@ android {
     lintOptions{
         disable 'MissingTranslation'
     }
+    
+    buildscript {
+dependencies.classpath
+"org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:
+${project.properties.get('sonarqubeVersion', 3.0)}"
+  }
+  
 }
+
+
+
 
 dependencies {
     compile 'com.android.support:appcompat-v7:21.0.+'
